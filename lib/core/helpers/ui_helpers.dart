@@ -23,7 +23,7 @@ const TextStyle size14GreytextStyle =
 
 /// Lottery Amount Style
 const TextStyle amoutTextStyle =
-    TextStyle(color: kPrimaryColor, fontSize: 18, fontWeight: FontWeight.w500);
+    TextStyle(color: kPrimaryColor, fontSize: 16, fontWeight: FontWeight.w500);
 
 /// Top Rounded Container Decoration
 const BoxDecoration topRoundeDecore = BoxDecoration(
@@ -32,4 +32,29 @@ const BoxDecoration topRoundeDecore = BoxDecoration(
     topRight: Radius.circular(20),
     topLeft: Radius.circular(20),
   ),
+);
+
+/// Navigate Back Button Text Style
+const TextStyle navigateBackButtontextStyle =
+    TextStyle(color: Colors.white, fontSize: 12);
+
+/// Chosen Number Style shown rounded white Box
+const TextStyle chosedNumberStyle = TextStyle(
+  color: kPrimaryColor,
+  fontWeight: FontWeight.w700,
+  fontSize: 18,
+);
+
+/// Text Style for 16 Font Size and Color grey
+
+final TextStyle grey16textStyle = TextStyle(
+  fontSize: 16,
+  color: Colors.grey[700],
+);
+
+/// Text Style for 15 Font Size and Color grey
+
+final TextStyle grey15textStyle = TextStyle(
+  fontSize: 15,
+  color: Colors.grey[700],
 );

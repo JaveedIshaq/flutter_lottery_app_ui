@@ -14,8 +14,8 @@ class FlagBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 60,
-      height: 30,
+      width: 45,
+      height: 25,
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/config/colors.dart';
 import 'package:flutter_lottery_app_ui/ui/views/lottery_home/lottery_home_view.dart';
-import 'package:flutter_lottery_app_ui/ui/views/result_view/lottery_result_view.dart';
 
 void main() {
   runApp(MyApp());

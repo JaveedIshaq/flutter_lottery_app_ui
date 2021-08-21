@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/background.dart';
-import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/lottery_body.dart';
+import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/lottery_home_body.dart';
 
 ///Lottery Ticket View, Current Entry Point of the App
 class LotteryHomeView extends StatelessWidget {
@@ -11,7 +11,7 @@ class LotteryHomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Background(
-        child: LotteryBody(),
+        child: LotteryHomeBody(),
       ),
     );
   }

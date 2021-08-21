@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/helpers/ui_helpers.dart';
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/background.dart';
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/heading_text.dart';
+import 'package:flutter_lottery_app_ui/ui/shared_widgets/navigate_back_button.dart';
 
 /// Lottery Result View
 class LotteryResultView extends StatefulWidget {
@@ -53,34 +54,41 @@ class _LotteryResultViewState extends State<LotteryResultView> {
 
     return Scaffold(
       body: Background(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  height: size.height * 0.6,
-                  width: size.width * 0.8,
-                  decoration: rounderCorcerWhoteboxDecoration,
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        HeadingText(
-                          text: resultHeading,
-                          textColor: Colors.black87,
-                        ),
-                        Image.asset('assets/images/$imageName.png'),
-                        HeadingText(
-                          text: resultAmoutInfo,
-                          textColor: Colors.black87,
-                        ),
-                      ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              const Align(
+                alignment: Alignment.topLeft,
+                child: NavigateBackButton(title: 'Your Result'),
+              ),
+              const SizedBox(height: 50),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: size.height * 0.6,
+                    width: size.width * 0.8,
+                    decoration: rounderCorcerWhoteboxDecoration,
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          HeadingText(
+                            text: resultHeading,
+                            textColor: Colors.black87,
+                          ),
+                          Image.asset('assets/images/$imageName.png'),
+                          HeadingText(
+                            text: resultAmoutInfo,
+                            textColor: Colors.black87,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                )
-              ],
-            ),
+                  )
+                ],
+              ),
+            ],
           ),
         ),
       ),

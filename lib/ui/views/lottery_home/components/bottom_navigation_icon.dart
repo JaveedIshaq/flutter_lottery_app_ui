@@ -7,29 +7,44 @@ class BottomNavigationIcon extends StatelessWidget {
   const BottomNavigationIcon({
     Key? key,
     required this.icon,
-    this.padding = 1,
+    this.marginBottom = 0,
+    required this.iconColor,
+    required this.iconbGColor,
   }) : super(key: key);
 
   /// Icon
   final IconData icon;
 
+  /// icon color
+  final Color iconColor;
+
+  /// Icon Background Color
+  final Color iconbGColor;
+
   /// Padding from Bottom
-  final double? padding;
+  final double? marginBottom;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: padding!, left: 20, right: 20),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          splashColor: kPrimaryColor.withOpacity(0.5),
-          onTap: () {},
-          child: RotatedBox(
-            quarterTurns: 2,
-            child: Icon(
-              icon,
-              color: Colors.white,
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 15),
+      padding: EdgeInsets.only(top: marginBottom!),
+      child: RotatedBox(
+        quarterTurns: 2,
+        child: ClipOval(
+          child: Material(
+            color: iconbGColor, // Button color
+            child: InkWell(
+              splashColor: kPrimaryColor.withOpacity(0.5), // Splash color
+              onTap: () {},
+              child: SizedBox(
+                width: 32,
+                height: 32,
+                child: Icon(
+                  icon,
+                  color: iconColor,
+                ),
+              ),
             ),
           ),
         ),
