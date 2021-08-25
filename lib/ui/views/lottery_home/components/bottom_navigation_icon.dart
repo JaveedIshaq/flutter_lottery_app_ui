@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/config/colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Bottom Navigation Icon Box
 class BottomNavigationIcon extends StatelessWidget {
@@ -27,7 +28,7 @@ class BottomNavigationIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 15),
+      margin: EdgeInsets.symmetric(horizontal: 15.w),
       padding: EdgeInsets.only(top: marginBottom!),
       child: RotatedBox(
         quarterTurns: 2,
@@ -38,8 +39,8 @@ class BottomNavigationIcon extends StatelessWidget {
               splashColor: kPrimaryColor.withOpacity(0.5), // Splash color
               onTap: () {},
               child: SizedBox(
-                width: 32,
-                height: 32,
+                width: 32.w,
+                height: 32.h,
                 child: Icon(
                   icon,
                   color: iconColor,

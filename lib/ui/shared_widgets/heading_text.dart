@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/helpers/ui_helpers.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Heading Text Widget Accrss the App
 class HeadingText extends StatelessWidget {
@@ -19,7 +20,7 @@ class HeadingText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(20.w),
       child: Text(
         text,
         textAlign: TextAlign.center,

@@ -9,6 +9,12 @@ class LotteryHomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
+    // ignore: avoid_print
+    print('Device width is: ${size.width}');
+    // ignore: avoid_print
+    print('Device height is: ${size.height}');
     return const Scaffold(
       body: Background(
         child: LotteryHomeBody(),

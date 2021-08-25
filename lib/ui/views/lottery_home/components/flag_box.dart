@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Image Box
 class FlagBox extends StatelessWidget {
@@ -14,8 +15,8 @@ class FlagBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 45,
-      height: 25,
+      width: 35.w,
+      height: 20.h,
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,

@@ -5,6 +5,7 @@ import 'package:flutter_lottery_app_ui/ui/views/choose_number_view/choose_number
 import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/flag_box.dart';
 import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/list_tile_parent.dart';
 import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/play_now_button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Lottery Item
 class LotteryItemListTile extends StatelessWidget {
@@ -17,19 +18,26 @@ class LotteryItemListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return ListTileParent(
       child: ListTile(
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(
+            MaterialPageRoute<dynamic>(
                 builder: (BuildContext context) =>
                     const ChooseLotteryNumbersView()),
           );
         },
-        leading: Image.asset(lottery.logo!),
         title: Row(
           children: <Widget>[
+            Image.asset(
+              lottery.logo!,
+              width: 45.w,
+              height: 45.sp,
+            ),
+            SizedBox(width: 5.w),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -37,12 +45,12 @@ class LotteryItemListTile extends StatelessWidget {
                   lottery.name!,
                   style: lotteryNameStyle,
                 ),
-                const SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Text(
                   lottery.type!,
                   style: size14GreytextStyle,
                 ),
-                const SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Text(
                   lottery.amount!,
                   style: amoutTextStyle,
@@ -56,8 +64,8 @@ class LotteryItemListTile extends StatelessWidget {
                 FlagBox(
                   image: lottery.flag!,
                 ),
-                const SizedBox(height: 10),
-                const Text(
+                SizedBox(height: 10.h),
+                Text(
                   'Next Draw',
                   style: size14GreytextStyle,
                 ),
@@ -67,9 +75,10 @@ class LotteryItemListTile extends StatelessWidget {
                 ),
               ],
             ),
+            if (size.width > 360) const Spacer() else Container(),
+            const PlayNowButton(),
           ],
         ),
-        trailing: const PlayNowButton(),
       ),
     );
   }

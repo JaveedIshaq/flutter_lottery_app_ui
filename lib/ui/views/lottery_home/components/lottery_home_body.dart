@@ -5,6 +5,7 @@ import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/bottom_n
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/rounded_parent_box.dart';
 import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/lottery_item_list_tile.dart';
 import 'package:flutter_lottery_app_ui/ui/views/lottery_home/components/lottery_ticket_header.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 ///Lottery Home Body Widget
 class LotteryHomeBody extends StatelessWidget {
@@ -24,7 +25,7 @@ class LotteryHomeBody extends StatelessWidget {
           const LotteryTicketHeader(),
           RoundedParentBox(
             heightRatio: 0.2,
-            bottomPadding: 75,
+            bottomPadding: 75.h,
             child: ListView.builder(
               itemCount: upcomingLotteriesList.length,
               itemBuilder: (BuildContext context, int index) {
