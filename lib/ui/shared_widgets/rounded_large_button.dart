@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/config/colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Play Now Button Widget
 class RoundedLargeButton extends StatelessWidget {
@@ -37,14 +38,14 @@ class RoundedLargeButton extends StatelessWidget {
         splashColor: kPrimaryColor,
         child: Container(
           width: MediaQuery.of(context).size.width * widthRatio,
-          margin: const EdgeInsets.only(top: 10),
+          margin: EdgeInsets.only(top: 10.h),
           decoration: BoxDecoration(
             color: bgColor,
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(30.r),
           ),
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 17),
+              padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 17.h),
               child: Text(
                 title,
                 style: TextStyle(color: textColor, fontWeight: FontWeight.w500),

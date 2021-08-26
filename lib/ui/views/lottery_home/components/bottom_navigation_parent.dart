@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/config/colors.dart';
 import 'package:flutter_lottery_app_ui/core/utils/arc_clipper.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Bottom Navigation Parent Widgte
 class BottomNavigationParent extends StatelessWidget {
@@ -24,7 +25,7 @@ class BottomNavigationParent extends StatelessWidget {
           clipper: ArcClipper(),
           child: Container(
             width: size.width,
-            height: 80,
+            height: 80.h,
             color: kPrimaryColor,
             child: Center(child: child),
           ),

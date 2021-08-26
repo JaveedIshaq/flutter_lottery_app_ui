@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/config/colors.dart';
 import 'package:flutter_lottery_app_ui/core/helpers/ui_helpers.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// User Chosed Number inside a rounded white Box
 class NumberInCircle extends StatelessWidget {
@@ -24,18 +25,18 @@ class NumberInCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8),
+      padding: EdgeInsets.all(8.r),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           splashColor: Colors.grey,
           onTap: onTap,
           child: Container(
-            height: 50,
-            width: 50,
+            height: 40.h,
+            width: 40.w,
             decoration: BoxDecoration(
               color: selected ? kPrimaryColor : Colors.white,
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(25.r),
               border: Border.all(color: selected ? kPrimaryColor : Colors.grey),
             ),
             child: Center(

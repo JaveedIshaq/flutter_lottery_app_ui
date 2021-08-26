@@ -3,6 +3,7 @@ import 'package:flutter_lottery_app_ui/core/helpers/ui_helpers.dart';
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/background.dart';
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/heading_text.dart';
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/navigate_back_button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Lottery Result View
 class LotteryResultView extends StatefulWidget {
@@ -61,7 +62,7 @@ class _LotteryResultViewState extends State<LotteryResultView> {
                 alignment: Alignment.topLeft,
                 child: NavigateBackButton(title: 'Your Result'),
               ),
-              const SizedBox(height: 50),
+              SizedBox(height: 50.h),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -77,7 +78,11 @@ class _LotteryResultViewState extends State<LotteryResultView> {
                             text: resultHeading,
                             textColor: Colors.black87,
                           ),
-                          Image.asset('assets/images/$imageName.png'),
+                          Image.asset(
+                            'assets/images/$imageName.png',
+                            width: 230.w,
+                            height: 230.h,
+                          ),
                           HeadingText(
                             text: resultAmoutInfo,
                             textColor: Colors.black87,

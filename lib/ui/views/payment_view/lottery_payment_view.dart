@@ -7,6 +7,7 @@ import 'package:flutter_lottery_app_ui/ui/shared_widgets/navigate_back_button.da
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/rounded_large_button.dart';
 import 'package:flutter_lottery_app_ui/ui/views/choose_number_view/components/number_in_circle.dart';
 import 'package:flutter_lottery_app_ui/ui/views/submit_lottery/submit_lottery_view.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Lottery Result View
 class LotteryPaymentView extends StatelessWidget {
@@ -34,12 +35,12 @@ class LotteryPaymentView extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: NavigateBackButton(title: 'Payment'),
               ),
-              const SizedBox(height: 50),
+              SizedBox(height: 50.h),
               Text(
                 formattedDate,
                 style: headingTextStyle.copyWith(color: Colors.white),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -50,11 +51,11 @@ class LotteryPaymentView extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          const SizedBox(height: 50),
+                          SizedBox(height: 50.h),
                           Text('Selected Numbers', style: grey16textStyle),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10.h),
                           SizedBox(
-                            height: 30,
+                            height: 30.h,
                             child: ListView.builder(
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
@@ -62,16 +63,16 @@ class LotteryPaymentView extends StatelessWidget {
                                 itemBuilder: (BuildContext contex, int index) {
                                   return Text('${selectedNumbers[index]}, ',
                                       style: headingTextStyle.copyWith(
-                                          fontSize: 22));
+                                          fontSize: 22.sp));
                                 }),
                           ),
 
-                          const SizedBox(height: 20),
+                          SizedBox(height: 20.h),
                           Text(
                             'Number Of Draws',
                             style: grey15textStyle,
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10.h),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
@@ -92,24 +93,24 @@ class LotteryPaymentView extends StatelessWidget {
                               )
                             ],
                           ),
-                          const SizedBox(height: 20),
+                          SizedBox(height: 20.h),
                           Text('Possible Winners', style: grey15textStyle),
                           // ignore: use_raw_strings
                           const Text('\$100 - \$1200'),
-                          const SizedBox(height: 50),
+                          SizedBox(height: 50.h),
                         ],
                       ),
                     ),
                   )
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Text(
                 // ignore: use_raw_strings
                 'Total : \$10',
                 style: headingTextStyle.copyWith(color: Colors.white),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               RoundedLargeButton(
                 title: 'Payment Now',
                 textColor: kPrimaryColor,
@@ -118,14 +119,14 @@ class LotteryPaymentView extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
+                    MaterialPageRoute<dynamic>(
                       builder: (BuildContext context) =>
                           const SubmitLotteryView(),
                     ),
                   );
                 },
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
             ],
           ),
         ),

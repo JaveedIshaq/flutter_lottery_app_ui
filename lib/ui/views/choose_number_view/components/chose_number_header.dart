@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/navigate_back_button.dart';
 import 'package:flutter_lottery_app_ui/ui/views/choose_number_view/components/choosen_number.dart';
 import 'package:flutter_lottery_app_ui/ui/views/choose_number_view/components/empty_number_boxes_row.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Lottery Home View Top Header
 class ChoseNumbersHeader extends StatelessWidget {
@@ -33,25 +34,25 @@ class ChoseNumbersHeader extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: <Widget>[
-                  const Text(
+                  Text(
                     'Choose',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                      fontSize: 16.sp,
                     ),
                   ),
-                  const SizedBox(height: 3),
+                  SizedBox(height: 3.h),
                   const Text(
                     '5 Numbers',
                     style: TextStyle(color: Colors.white),
                   ),
-                  const SizedBox(height: 15),
+                  SizedBox(height: 15.h),
                   if (selectedNumbers.isEmpty)
                     const EmptyNuberBoxesRow()
                   else
                     SizedBox(
-                      height: 70,
+                      height: 70.h,
                       child: ListView.builder(
                           shrinkWrap: true,
                           scrollDirection: Axis.horizontal,
@@ -61,7 +62,7 @@ class ChoseNumbersHeader extends StatelessWidget {
                                 number: selectedNumbers[index]);
                           }),
                     ),
-                  const SizedBox(height: 15),
+                  SizedBox(height: 15.h),
                 ],
               ),
             ),

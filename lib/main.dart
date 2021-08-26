@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() => runApp(
       DevicePreview(
         // ignore: avoid_redundant_argument_values
-        enabled: true,
+        enabled: false,
         plugins: const <DevicePreviewPlugin>[
           ScreenshotPlugin(),
         ],

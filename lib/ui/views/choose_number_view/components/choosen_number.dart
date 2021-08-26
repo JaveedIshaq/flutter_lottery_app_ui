@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/helpers/ui_helpers.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// User Chosed Number inside a rounded white Box
 class ChoosenNumber extends StatelessWidget {
@@ -15,9 +16,9 @@ class ChoosenNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 10),
-      height: 65,
-      width: 50,
+      margin: EdgeInsets.only(left: 10.w),
+      height: 55.h,
+      width: 40.w,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(25)),
       child: Center(

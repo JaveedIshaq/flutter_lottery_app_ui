@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lottery_app_ui/core/config/colors.dart';
-import 'package:flutter_lottery_app_ui/core/helpers/ui_helpers.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Navigate to Back Screen Button
 class SelectButton extends StatelessWidget {
@@ -24,20 +24,20 @@ class SelectButton extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 8),
+                padding: EdgeInsets.only(top: 8.h),
                 child: Text(
                   title,
                   style: const TextStyle(
                       fontWeight: FontWeight.w700, color: Colors.black54),
                 ),
               ),
-              const SizedBox(width: 5),
-              const RotatedBox(
+              SizedBox(width: 5.w),
+              RotatedBox(
                 quarterTurns: 3,
                 child: Icon(
                   Icons.arrow_back_ios,
                   color: Colors.black87,
-                  size: 15,
+                  size: 15.w,
                 ),
               ),
             ],

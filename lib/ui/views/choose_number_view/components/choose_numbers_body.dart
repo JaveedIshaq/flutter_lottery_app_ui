@@ -9,6 +9,7 @@ import 'package:flutter_lottery_app_ui/ui/views/choose_number_view/components/nu
 import 'package:flutter_lottery_app_ui/ui/views/choose_number_view/components/select_button.dart';
 import 'package:flutter_lottery_app_ui/ui/views/payment_view/lottery_payment_view.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// [ChoseNumbersBody] it is the Body widget for ChooseNumbers View Screen
 class ChoseNumbersBody extends StatefulWidget {
@@ -42,9 +43,9 @@ class _ChoseNumbersBodyState extends State<ChoseNumbersBody> {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                     buildTimeRow(),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Wrap(
                       children: List<Widget>.generate(
                           30,
@@ -82,7 +83,7 @@ class _ChoseNumbersBodyState extends State<ChoseNumbersBody> {
                         } else {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
+                            MaterialPageRoute<dynamic>(
                               builder: (BuildContext context) =>
                                   LotteryPaymentView(
                                       selectedNumbers: selectedNumbers),
@@ -91,7 +92,7 @@ class _ChoseNumbersBodyState extends State<ChoseNumbersBody> {
                         }
                       },
                     ),
-                    const SizedBox(height: 30),
+                    SizedBox(height: 30.h),
                   ],
                 ),
               ),

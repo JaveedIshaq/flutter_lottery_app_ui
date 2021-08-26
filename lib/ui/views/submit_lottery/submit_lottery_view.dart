@@ -9,6 +9,7 @@ import 'package:flutter_lottery_app_ui/ui/shared_widgets/rounded_large_button.da
 import 'package:flutter_lottery_app_ui/ui/shared_widgets/text_field_container.dart';
 import 'package:flutter_lottery_app_ui/ui/views/choose_number_view/components/number_in_circle.dart';
 import 'package:flutter_lottery_app_ui/ui/views/result_view/lottery_result_view.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Lottery Result View
 class SubmitLotteryView extends StatefulWidget {
@@ -55,7 +56,7 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                 alignment: Alignment.topLeft,
                 child: NavigateBackButton(title: 'See Result'),
               ),
-              const SizedBox(height: 50),
+              SizedBox(height: 50.h),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -67,26 +68,26 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          const SizedBox(height: 50),
+                          SizedBox(height: 50.h),
                           TextFieldContainer(
                             child: InkWell(
                               onTap: () {},
                               child: SizedBox(
-                                height: 50,
+                                height: 50.h,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Row(
-                                      children: const <Widget>[
-                                        Icon(
+                                      children: <Widget>[
+                                        const Icon(
                                           Icons.ac_unit,
                                           color: iconColor,
                                         ),
-                                        SizedBox(width: 10),
-                                        Text('Jackpots'),
-                                        Spacer(),
-                                        RotatedBox(
+                                        SizedBox(width: 10.w),
+                                        const Text('Jackpots'),
+                                        const Spacer(),
+                                        const RotatedBox(
                                           quarterTurns: 3,
                                           child: Icon(
                                             Icons.arrow_back_ios,
@@ -109,7 +110,7 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                                 });
                               },
                               child: SizedBox(
-                                height: 50,
+                                height: 50.h,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,7 +121,7 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                                           Icons.date_range,
                                           color: iconColor,
                                         ),
-                                        const SizedBox(width: 10),
+                                        SizedBox(width: 10.w),
                                         Text(drawDate.toString()),
                                         const Spacer(),
                                         const Icon(
@@ -134,18 +135,18 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 20),
+                          SizedBox(height: 20.h),
                           Align(
                             alignment: Alignment.topLeft,
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 12),
+                              padding: EdgeInsets.only(left: 12.w),
                               child: Text(
                                 'Enter your Number',
                                 style: grey15textStyle,
                               ),
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10.h),
                           Wrap(
                             children: <Widget>[
                               NumberInCircle(
@@ -175,7 +176,7 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                               )
                             ],
                           ),
-                          const SizedBox(height: 30),
+                          SizedBox(height: 30.h),
                           RoundedLargeButton(
                             title: 'See Result',
                             textColor: Colors.white,
@@ -186,7 +187,7 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                               final bool result = r.nextDouble() <= 0.7;
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
+                                MaterialPageRoute<dynamic>(
                                   builder: (BuildContext context) =>
                                       LotteryResultView(
                                     winStatus: result,
@@ -195,7 +196,7 @@ class _SubmitLotteryViewState extends State<SubmitLotteryView> {
                               );
                             },
                           ),
-                          const SizedBox(height: 50),
+                          SizedBox(height: 50.h),
                         ],
                       ),
                     ),

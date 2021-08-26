@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// Lottery Item List Tile Parent Widget
 class ListTileParent extends StatelessWidget {
@@ -11,7 +12,7 @@ class ListTileParent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.only(bottom: 10, top: 10),
+        padding: EdgeInsets.only(bottom: 10.h, top: 10.h),
         decoration: const BoxDecoration(
           border: Border(
             bottom: BorderSide(color: Colors.grey),
